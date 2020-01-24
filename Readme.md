@@ -1,7 +1,7 @@
 
-//**********************************************************************
+**********************************************************************
  SIMPLE   Server  (Postgis BASED)
-//**********************************************************************
+**********************************************************************
 
 Simple Server es un modulo creado para desarrollar y probar rapidamente el desarrollo de servicios web.
 
@@ -10,7 +10,7 @@ Para que un servicio web accesible, se debe definir una URL o punto de entrada q
 En general, cada funcion contiene una consulta SQL, que puede o no recibir parametros, ejecuta la instruccion y devuelve resultados. Es esperado, dentro del contexto geoespacial, utilizar formatos estandares para intercambiar informacion, por lo que se suguiere devolver archivos GeoJSON.
 
 
-Ejemplo de USO:
+Ejemplo de USO potencial, definiendo una entrada a la capa wifi:
 
 http://localhost:8000/wifi_layer/getCoverage?lat=20.0&lon=100.0
 
@@ -64,21 +64,14 @@ y devuelve un archivo geoJSON.
 
 Dependencias:
 
-nodejs
-npm install pg-promise
-npm install local-web-server//  v3.0
 koa
+pg_promise
 
 INSTALACION
 
 npm install 
 
 Lo que integra todas las dependiencias necesarias.
-
-
- 
-
-
 
 El backend de Postgis es un servicio web que recibe peticiones via http y las redirige a postgis
 
@@ -108,17 +101,10 @@ o via los archivos
 y se accede via el url, aunque potree puede correr en su propio puerto y maquina.
 
 http://localhost:8000/getInfo (POST)
+
 http://localhost:8000/getData  (GET)
+
 http://localhost:8000/getResults  (POST)
-
-
-http://localhost:8000/(GET)
-
-
-
-**************************************
-DATOS
-*************************************
 
 
 
